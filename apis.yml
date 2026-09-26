@@ -1,23 +1,52 @@
 aid: atombiosciencepharmaceutical
+
 name: Atombiosciencepharmaceutical
-description: 'Atombiosciencepharmaceutical is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Atombiosciencepharmaceutical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling. The company appears in secondary-market listings but no public website or detailed information could be located despite searches on major search engines and direct attempts to access the listed equityzen.com page, which returned a 403 error. Consequently, the available public data is limited to its inclusion in the harvest and basic metadata such as name and maintainer contacts.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atombiosciencepharmaceutical/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Pharmaceuticals
+- Research
+- Health
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/atombiosciencepharmaceutical
+
+  - type: Hosts
+    url: hosts/atombiosciencepharmaceutical-hosts.yml
+  - type: Vendors
+    url: vendors/atombiosciencepharmaceutical-vendors.yml
+  - type: DomainSecurity
+    url: security/atombiosciencepharmaceutical-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/atombiosciencepharmaceutical
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
